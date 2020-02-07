@@ -1,0 +1,102 @@
+
+Showing logs for build [32mdiazphp-phptest-master-twxlw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-vlpfm[0m
+{"level":"warn","ts":1581117138.5621417,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1581117138.5626829,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mdiazphp-phptest-master-twxlw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-87hbk[0m
+{"level":"warn","ts":1581117139.4664607,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1581117139.4680028,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mdiazphp-phptest-master-twxlw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mdiazphp-phptest-master-twxlw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-diazphp-phptest-master-twxlw-kgctq[0m
+{"level":"warn","ts":1581117149.958016,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1581117150.532726,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/diazphp/phptest.git @ v0.0.1 in path /workspace/source"}
+
+Showing logs for build [32mdiazphp-phptest-master-twxlw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:559814b803578bfa0e42af351fac076cae0572e9
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mdiazphp-phptest-master-twxlw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mdiazphp-phptest-master-twxlw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image php:7.0-apache        
+ERROR: logging before flag.Parse: E0207 23:12:33.430864      10 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0207 23:12:33.434743      10 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2020/02/07 23:12:33 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0000] Error while retrieving image from cache: getting file info: stat /workspace/sha256:b4e5b78afa2504589f3a9868535e2b099418c9de14711574b09691fc3e0f0054: no such file or directory 
+[36mINFO[0m[0000] Downloading base image php:7.0-apache        
+2020/02/07 23:12:34 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Using files from context: [/workspace/source/src] 
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 80/tcp                  
+[36mINFO[0m[0001] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0001] Taking snapshot of full filesystem...        
+[36mINFO[0m[0001] Using files from context: [/workspace/source/src] 
+[36mINFO[0m[0001] COPY src/ /var/www/html                      
+[36mINFO[0m[0001] Taking snapshot of files...                  
+[36mINFO[0m[0001] EXPOSE 80                                    
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 80/tcp                  
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+2020/02/07 23:12:36 pushed blob: sha256:94cdc0d44c79d89c8cb6cb1c953a618c8841da96789c03ffb9c170d92a11a692
+2020/02/07 23:12:36 pushed blob: sha256:a52173c7a384fbc932c7e049970cdd9e5ce258e2d6c7a608b398c40aeddb8043
+2020/02/07 23:12:36 pushed blob: sha256:d9f072d61771f0bc903b453eca2aa1816ee9aaae195e7be586492a38619c45ce
+2020/02/07 23:12:36 pushed blob: sha256:f1548c2cd3762f0550634038ffb2e4e15a342ff40861121b4236ddc58b768c54
+2020/02/07 23:12:36 pushed blob: sha256:f76e300fbe727910ee01d0011a0d011f7cffe00483aea448496dbe49029aa8ad
+2020/02/07 23:12:36 pushed blob: sha256:e1062fd0605a7573b74b18dc834091cbb94662b46863858735775181fd01b55c
+2020/02/07 23:12:36 pushed blob: sha256:8ba923990f244d0ec64c6b247dc8bc9de707da22c6baca8750767ba674b33ff4
+2020/02/07 23:12:36 pushed blob: sha256:af9ff1b9ce5b028cb1a7c3ad2bc442aacb9a8ddd46cb8a41485b947536e3f4f6
+2020/02/07 23:12:36 pushed blob: sha256:a8a33d96b4e7acb10a1e637ccc316d5e823debfa5c64704b4935af982bd79926
+2020/02/07 23:12:36 pushed blob: sha256:9bf89f2eda244c750e106e9751aa6714e8002accc9ebc4efe784800ff424e2a8
+2020/02/07 23:12:38 pushed blob: sha256:37007e29219807979c0fc57591ff103c795c0c60438a29b6ca8c6ad79b70058e
+2020/02/07 23:12:39 pushed blob: sha256:c0421d5b63d69a2ae480d7c5caa3d21f8105a682249c55f4923f655e73e2f492
+2020/02/07 23:12:39 pushed blob: sha256:98af8902979aea4195030c6189edac2a470abcdd834648808b0f95bc90a1d0f0
+2020/02/07 23:12:39 pushed blob: sha256:177e7ef0df6987e0c5738a1fb5aba98b6b6e7a5fef992e481977dbb5ba3f91be
+2020/02/07 23:12:40 pushed blob: sha256:350207dcf1b7e69d73ee5e688ec3f1bb6576481773105b8635193dc7fe5010bb
+2020/02/07 23:12:40 gcr.io/dev-slapp/phptest:0.0.1: digest: sha256:411b7f72355b48acaf7873681bdb7bccfc5b99b3a182ffcc11ae7201f6efa52a size: 2532
+
+Showing logs for build [32mdiazphp-phptest-master-twxlw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mdiazphp-phptest-master-twxlw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/phptest to an unshallow repository
+Generating change log from git ref 17bff6e7dea62f835e05c8032ed4a6a9b532e032 => 4771c83192499ca819014587e415e2cfbddfbee8
+Associating user x-0 in users.jenkins.io with email ndiaz@sproutloud.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 559814b803578bfa0e42af351fac076cae0572e9 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for diazphp/phptest and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/diazphp/phptest/releases/tag/v0.0.1
+generated: /workspace/source/charts/phptest/templates/release.yaml
+Created Release phptest-0-0-1 resource in namespace **
+Updating PipelineActivity diazphp-phptest-master-1 with version 0.0.1
+Updated PipelineActivities diazphp-phptest-master-1 with release notes URL: https://github.com/diazphp/phptest/releases/tag/v0.0.1
+
+Showing logs for build [32mdiazphp-phptest-master-twxlw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file phptest-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mdiazphp-phptest-master-twxlw-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app phptest version 0.0.1 to namespace **-staging
+WARNING: 
+WARNING: Waiting for the fork of ******/environment-dev-devops-poc-staging to appear...
+Forked Git repository to https://github.com/******/environment-dev-devops-poc-staging
+Created Pull Request: https://github.com/diazphp/environment-dev-devops-poc-staging/pull/1
+Added label updatebot to Pull Request https://github.com/diazphp/environment-dev-devops-poc-staging/pull/1
+got git provider status pending from PR https://github.com/diazphp/environment-dev-devops-poc-staging/pull/1
+got git provider status pending from PR https://github.com/diazphp/environment-dev-devops-poc-staging/pull/1
+got git provider status pending from PR https://github.com/diazphp/environment-dev-devops-poc-staging/pull/1
+got git provider status pending from PR https://github.com/diazphp/environment-dev-devops-poc-staging/pull/1
+Pull Request https://github.com/diazphp/environment-dev-devops-poc-staging/pull/1 is merged at sha 2ddbc9182ba40080d5297db890356576e398a0d7
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names phptest, **-phptest, **-staging-phptest
