@@ -1,0 +1,97 @@
+
+Showing logs for build [32mdiazphp-phptest-pr-1-pr-build-xwcbm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-7cd8p[0m
+{"level":"warn","ts":1581298828.5366244,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1581298828.5372498,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mdiazphp-phptest-pr-1-pr-build-xwcbm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-hxjdc[0m
+{"level":"warn","ts":1581298829.9281178,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1581298829.929771,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mdiazphp-phptest-pr-1-pr-build-xwcbm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mdiazphp-phptest-pr-1-pr-build-xwcbm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-diazphp-phptest-pr-1-pr-build-xwcbm-vk26r[0m
+{"level":"warn","ts":1581298837.0139353,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1581298837.3890975,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/diazphp/phptest.git @ master in path /workspace/source"}
+
+Showing logs for build [32mdiazphp-phptest-pr-1-pr-build-xwcbm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:559814b803578bfa0e42af351fac076cae0572e9,1:303c303d0b86baa58b2069d9209c7020c806ef19
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 303c303d0b86baa58b2069d9209c7020c806ef19: 559814b803578bfa0e42af351fac076cae0572e9:
+DEBUG: ran git fetch --unshallow origin 303c303d0b86baa58b2069d9209c7020c806ef19: 559814b803578bfa0e42af351fac076cae0572e9: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 559814b803578bfa0e42af351fac076cae0572e9
+DEBUG: ran git reset --hard 559814b803578bfa0e42af351fac076cae0572e9 in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 303c303d0b86baa58b2069d9209c7020c806ef19
+DEBUG: ran git merge 303c303d0b86baa58b2069d9209c7020c806ef19 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 559814b803578bfa0e42af351fac076cae0572e9..HEAD
+Merged SHA 303c303d0b86baa58b2069d9209c7020c806ef19 with commit message 'testing **' into base branch master
+
+Showing logs for build [32mdiazphp-phptest-pr-1-pr-build-xwcbm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] Downloading base image php:7.0-apache        
+ERROR: logging before flag.Parse: E0210 01:40:39.522973      12 metadata.go:142] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+ERROR: logging before flag.Parse: E0210 01:40:39.527049      12 metadata.go:159] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+2020/02/10 01:40:39 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0000] Error while retrieving image from cache: getting file info: stat /workspace/sha256:b4e5b78afa2504589f3a9868535e2b099418c9de14711574b09691fc3e0f0054: no such file or directory 
+[36mINFO[0m[0000] Downloading base image php:7.0-apache        
+2020/02/10 01:40:40 No matching credentials were found, falling back on anonymous
+[36mINFO[0m[0001] Using files from context: [/workspace/source/src] 
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 80/tcp                  
+[36mINFO[0m[0001] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0001] Taking snapshot of full filesystem...        
+[36mINFO[0m[0001] Using files from context: [/workspace/source/src] 
+[36mINFO[0m[0001] COPY src/ /var/www/html                      
+[36mINFO[0m[0001] Taking snapshot of files...                  
+[36mINFO[0m[0001] EXPOSE 80                                    
+[36mINFO[0m[0001] cmd: EXPOSE                                  
+[36mINFO[0m[0001] Adding exposed port: 80/tcp                  
+[36mINFO[0m[0001] No files changed in this command, skipping snapshotting. 
+2020/02/10 01:40:40 existing blob: sha256:d9f072d61771f0bc903b453eca2aa1816ee9aaae195e7be586492a38619c45ce
+2020/02/10 01:40:40 existing blob: sha256:c0421d5b63d69a2ae480d7c5caa3d21f8105a682249c55f4923f655e73e2f492
+2020/02/10 01:40:40 existing blob: sha256:350207dcf1b7e69d73ee5e688ec3f1bb6576481773105b8635193dc7fe5010bb
+2020/02/10 01:40:40 existing blob: sha256:177e7ef0df6987e0c5738a1fb5aba98b6b6e7a5fef992e481977dbb5ba3f91be
+2020/02/10 01:40:40 existing blob: sha256:f1548c2cd3762f0550634038ffb2e4e15a342ff40861121b4236ddc58b768c54
+2020/02/10 01:40:40 existing blob: sha256:f76e300fbe727910ee01d0011a0d011f7cffe00483aea448496dbe49029aa8ad
+2020/02/10 01:40:40 existing blob: sha256:af9ff1b9ce5b028cb1a7c3ad2bc442aacb9a8ddd46cb8a41485b947536e3f4f6
+2020/02/10 01:40:40 existing blob: sha256:e1062fd0605a7573b74b18dc834091cbb94662b46863858735775181fd01b55c
+2020/02/10 01:40:40 existing blob: sha256:8ba923990f244d0ec64c6b247dc8bc9de707da22c6baca8750767ba674b33ff4
+2020/02/10 01:40:40 existing blob: sha256:37007e29219807979c0fc57591ff103c795c0c60438a29b6ca8c6ad79b70058e
+2020/02/10 01:40:40 existing blob: sha256:9bf89f2eda244c750e106e9751aa6714e8002accc9ebc4efe784800ff424e2a8
+2020/02/10 01:40:40 existing blob: sha256:98af8902979aea4195030c6189edac2a470abcdd834648808b0f95bc90a1d0f0
+2020/02/10 01:40:40 existing blob: sha256:a8a33d96b4e7acb10a1e637ccc316d5e823debfa5c64704b4935af982bd79926
+2020/02/10 01:40:41 pushed blob: sha256:0f7fa2ee462cc6e3ee24bfec645b82c3f15d6c3bca204a07002d5eb805847451
+2020/02/10 01:40:41 pushed blob: sha256:3da43a666036a9c9af89257bce9b0cc2c3b3ce8748b9e0b823d5e08d9f53f2a8
+2020/02/10 01:40:42 gcr.io/dev-slapp/phptest:0.0.0-SNAPSHOT-PR-1-1: digest: sha256:3b610adf5177ddcf501dc51a7b108ebf58f48657131012275cf51ebaa29dc82f size: 2532
+
+Showing logs for build [32mdiazphp-phptest-pr-1-pr-build-xwcbm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mdiazphp-phptest-pr-1-pr-build-xwcbm-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-1-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: gcr.io\/dev-slapp\/phptest|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-1-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-1-1" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+error: failed to build the dependencies of chart '.': failed to run 'helm dependency build' command in directory '.', output: 'Hang tight while we grab the latest from your chart repositories...
+...Unable to get an update from the "local" chart repository (http://127.0.0.1:8879/charts):
+	Get http://127.0.0.1:8879/charts/index.yaml: dial tcp 127.0.0.1:8879: connect: connection refused
+...Successfully got an update from the "jenkins-x-chartmuseum" chart repository
+...Successfully got an update from the "storage.googleapis.com" chart repository
+...Successfully got an update from the "stable" chart repository
+...Successfully got an update from the "chartmuseum.jenkins-x.io" chart repository
+Update Complete.'
+make: *** [preview] Error 1
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-promote-make-preview'. The execution of the pipeline has stopped.[0m
